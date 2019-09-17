@@ -1,1 +1,3 @@
-Repo for FHNW depa_colorpicker Module
+# AppStarter
+
+Starter Template for JavaFX Application using gradle
