@@ -11,7 +11,7 @@ public class PresentationModel {
 
     private final Stage primaryStage;
 
-    private final StringProperty applicationTitle = new SimpleStringProperty("FHNW depa Colorpicker Observer Pattern");
+    private final StringProperty applicationTitle = new SimpleStringProperty("FHNW depa color picker");
     private final StringProperty fileMenuTitle = new SimpleStringProperty("File");
     private final StringProperty attributesMenuTitle = new SimpleStringProperty("Attributes");
 

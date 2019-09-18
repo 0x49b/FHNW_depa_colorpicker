@@ -1,3 +1,3 @@
-# AppStarter
+# depa color picker
 
-Starter Template for JavaFX Application using gradle
+Color Picker for FHNW Course depa
