@@ -1,6 +1,5 @@
-group 'ch.sbb'
+group 'ch.fhnw'
 version '0.1-SNAPSHOT'
-
 apply plugin: 'java'
 
 buildscript {

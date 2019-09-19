@@ -1,4 +1,4 @@
-package ch.fhnw.depa.colorpicker;
+package ch.fhnw.depa.colorpicker.model;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -32,7 +32,7 @@ public class PresentationModel {
     private final SimpleStringProperty bCS = new SimpleStringProperty("0");
 
 
-    PresentationModel(Stage pStage) {
+    public PresentationModel(Stage pStage) {
         primaryStage = pStage;
 
         Bindings.bindBidirectional(rCS, rCI, new NumberStringConverter());

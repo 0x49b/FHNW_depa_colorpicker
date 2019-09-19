@@ -1,5 +1,6 @@
 package ch.fhnw.depa.colorpicker;
 
+import ch.fhnw.depa.colorpicker.model.PresentationModel;
 import ch.fhnw.depa.colorpicker.view.ApplicationUI;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -18,7 +19,7 @@ public class AppStarter extends Application {
         primaryStage.titleProperty().bind(pm.applicationTitleProperty());
         primaryStage.setMinWidth(500);
 		primaryStage.setMinHeight(250);
-		primaryStage.setResizable(false);
+		primaryStage.setResizable(true);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

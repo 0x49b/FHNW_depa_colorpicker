@@ -1,13 +1,16 @@
 package ch.fhnw.depa.colorpicker.view;
 
-import ch.fhnw.depa.colorpicker.PresentationModel;
+import ch.fhnw.depa.colorpicker.model.PresentationModel;
+import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.StrokeType;
+import javafx.util.converter.IntegerStringConverter;
+
+import java.util.function.UnaryOperator;
 
 public class ControlsView extends GridPane {
 
@@ -25,6 +28,16 @@ public class ControlsView extends GridPane {
     private TextField bHex;
     private Button darkerButton;
     private Button brighterButton;
+
+    private ToggleGroup radioGroup;
+    private RadioButton redRadio;
+    private RadioButton greenRadio;
+    private RadioButton blueRadio;
+    private RadioButton yellowRadio;
+    private RadioButton cyanRadio;
+    private RadioButton orangeRadio;
+    private RadioButton whiteRadio;
+    private RadioButton blackRadio;
 
     public ControlsView(PresentationModel presentationModel) {
 
@@ -55,6 +68,8 @@ public class ControlsView extends GridPane {
         bSlider = new Slider(0, 255, 0);
 
         cRect = new Rectangle(200, 100);
+        cRect.setStrokeType(StrokeType.OUTSIDE);
+        cRect.setStroke(Color.BLACK);
 
         rValue = new TextField();
         gValue = new TextField();
@@ -74,6 +89,40 @@ public class ControlsView extends GridPane {
 
         darkerButton = new Button();
         brighterButton = new Button();
+
+        radioGroup = new ToggleGroup();
+        redRadio = new RadioButton("red");
+        redRadio.setUserData("RED");
+        redRadio.setToggleGroup(radioGroup);
+
+        greenRadio = new RadioButton("green");
+        greenRadio.setUserData("GREEN");
+        greenRadio.setToggleGroup(radioGroup);
+
+        blueRadio = new RadioButton("blue");
+        blueRadio.setUserData("BLUE");
+        blueRadio.setToggleGroup(radioGroup);
+
+        yellowRadio = new RadioButton("yellow");
+        yellowRadio.setUserData("YELLOW");
+        yellowRadio.setToggleGroup(radioGroup);
+
+        cyanRadio = new RadioButton("Cyan");
+        cyanRadio.setUserData("CYAN");
+        cyanRadio.setToggleGroup(radioGroup);
+
+        orangeRadio = new RadioButton("orange");
+        orangeRadio.setUserData("ORANGE");
+        orangeRadio.setToggleGroup(radioGroup);
+
+        whiteRadio = new RadioButton("white");
+        whiteRadio.setUserData("WHITE");
+        whiteRadio.setToggleGroup(radioGroup);
+
+        blackRadio = new RadioButton("black");
+        blackRadio.setUserData("BLACK");
+        blackRadio.setToggleGroup(radioGroup);
+        blackRadio.fire();
     }
 
     private void layoutControls() {
@@ -90,9 +139,17 @@ public class ControlsView extends GridPane {
         add(bHex, 2, 2);
 
         // Here must be the rectangle
-        add(cRect, 0, 3, 1, 2);
+        add(cRect, 0, 3, 1, 5);
 
         // Here is the space for the RadioButton
+        add(redRadio, 1, 3);
+        add(greenRadio, 1, 4);
+        add(blueRadio, 1, 5);
+        add(yellowRadio, 1, 6);
+        add(cyanRadio, 1, 7);
+        add(orangeRadio, 1, 8);
+        add(whiteRadio, 1, 9);
+        add(blackRadio, 1, 10);
 
         add(darkerButton, 2, 3);
         add(brighterButton, 2, 4);
@@ -101,7 +158,7 @@ public class ControlsView extends GridPane {
     private void setupEventHandlers() {
 
         darkerButton.setOnAction(event -> {
-            if (pm.getrCI() >=1 ) {
+            if (pm.getrCI() >= 1) {
                 pm.setrCI(pm.getrCI() - 2);
             } else {
                 pm.setrCI(0);
@@ -119,17 +176,17 @@ public class ControlsView extends GridPane {
         });
 
         brighterButton.setOnAction(event -> {
-            if (pm.getrCI() <254 ) {
+            if (pm.getrCI() < 254) {
                 pm.setrCI(pm.getrCI() + 2);
             } else {
                 pm.setrCI(255);
             }
-            if (pm.getgCI() <254) {
+            if (pm.getgCI() < 254) {
                 pm.setgCI(pm.getgCI() + 2);
             } else {
                 pm.setgCI(255);
             }
-            if (pm.getbCI() <254) {
+            if (pm.getbCI() < 254) {
                 pm.setbCI(pm.getbCI() + 2);
             } else {
                 pm.setbCI(255);
@@ -142,18 +199,27 @@ public class ControlsView extends GridPane {
 
         rValue.textProperty().addListener((observable) -> {
             rHex.setText(Integer.toHexString(pm.rCIProperty().get()).toUpperCase());
-            updateRectColor();
+            updateRectColor(null);
         });
 
         gValue.textProperty().addListener((observable -> {
             gHex.setText(Integer.toHexString(pm.gCIProperty().get()).toUpperCase());
-            updateRectColor();
+            updateRectColor(null);
         }));
 
         bValue.textProperty().addListener((observable -> {
             bHex.setText(Integer.toHexString(pm.bCIProperty().get()).toUpperCase());
-            updateRectColor();
+            updateRectColor(null);
         }));
+
+        radioGroup.selectedToggleProperty().addListener(
+                (ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) -> {
+                    if (radioGroup.getSelectedToggle() != null) {
+                        System.out.println(radioGroup.getSelectedToggle().getUserData());
+                        updateRectColor(Color.);
+                    }
+                }
+        );
     }
 
     private void setupBindings() {
@@ -171,8 +237,10 @@ public class ControlsView extends GridPane {
         bValue.textProperty().bindBidirectional(pm.bCSProperty());
     }
 
-    private void updateRectColor() {
-        Color c = Color.rgb(pm.rCIProperty().getValue(), pm.gCIProperty().getValue(), pm.bCIProperty().getValue());
+    private void updateRectColor(Color c) {
+        if(c == null) {
+            c = Color.rgb(pm.rCIProperty().getValue(), pm.gCIProperty().getValue(), pm.bCIProperty().getValue());
+        }
         cRect.setFill(c);
     }
 

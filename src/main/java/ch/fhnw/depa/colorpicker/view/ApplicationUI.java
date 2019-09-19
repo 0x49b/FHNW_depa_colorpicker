@@ -1,6 +1,6 @@
 package ch.fhnw.depa.colorpicker.view;
 
-import ch.fhnw.depa.colorpicker.PresentationModel;
+import ch.fhnw.depa.colorpicker.model.PresentationModel;
 import javafx.application.Platform;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
