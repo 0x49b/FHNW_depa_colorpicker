@@ -10,6 +10,10 @@ import javafx.stage.Stage;
 
 public class AppStarter extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         PresentationModel pm = new PresentationModel(primaryStage);
@@ -20,13 +24,9 @@ public class AppStarter extends Application {
 
         primaryStage.titleProperty().bind(pm.applicationTitleProperty());
         primaryStage.setMinWidth(500);
-		primaryStage.setMinHeight(250);
-		primaryStage.setResizable(true);
+        primaryStage.setMinHeight(250);
+        primaryStage.setResizable(true);
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

@@ -81,108 +81,108 @@ public class PresentationModel {
         setbCI(b);
     }
 
-    public void setHexColor(String hexColor) {
-        this.hexColor.set(hexColor);
-    }
-
     public boolean isRedBool() {
         return redBool.get();
-    }
-
-    public SimpleBooleanProperty redBoolProperty() {
-        return redBool;
     }
 
     public void setRedBool(boolean redBool) {
         this.redBool.set(redBool);
     }
 
-    public boolean isGreenBool() {
-        return greenBool.get();
+    public SimpleBooleanProperty redBoolProperty() {
+        return redBool;
     }
 
-    public SimpleBooleanProperty greenBoolProperty() {
-        return greenBool;
+    public boolean isGreenBool() {
+        return greenBool.get();
     }
 
     public void setGreenBool(boolean greenBool) {
         this.greenBool.set(greenBool);
     }
 
-    public boolean isBlueBool() {
-        return blueBool.get();
+    public SimpleBooleanProperty greenBoolProperty() {
+        return greenBool;
     }
 
-    public SimpleBooleanProperty blueBoolProperty() {
-        return blueBool;
+    public boolean isBlueBool() {
+        return blueBool.get();
     }
 
     public void setBlueBool(boolean blueBool) {
         this.blueBool.set(blueBool);
     }
 
-    public boolean isYellowBool() {
-        return yellowBool.get();
+    public SimpleBooleanProperty blueBoolProperty() {
+        return blueBool;
     }
 
-    public SimpleBooleanProperty yellowBoolProperty() {
-        return yellowBool;
+    public boolean isYellowBool() {
+        return yellowBool.get();
     }
 
     public void setYellowBool(boolean yellowBool) {
         this.yellowBool.set(yellowBool);
     }
 
-    public boolean isCyanBool() {
-        return cyanBool.get();
+    public SimpleBooleanProperty yellowBoolProperty() {
+        return yellowBool;
     }
 
-    public SimpleBooleanProperty cyanBoolProperty() {
-        return cyanBool;
+    public boolean isCyanBool() {
+        return cyanBool.get();
     }
 
     public void setCyanBool(boolean cyanBool) {
         this.cyanBool.set(cyanBool);
     }
 
-    public boolean isOrangeBool() {
-        return orangeBool.get();
+    public SimpleBooleanProperty cyanBoolProperty() {
+        return cyanBool;
     }
 
-    public SimpleBooleanProperty orangeBoolProperty() {
-        return orangeBool;
+    public boolean isOrangeBool() {
+        return orangeBool.get();
     }
 
     public void setOrangeBool(boolean orangeBool) {
         this.orangeBool.set(orangeBool);
     }
 
-    public boolean isWhiteBool() {
-        return whiteBool.get();
+    public SimpleBooleanProperty orangeBoolProperty() {
+        return orangeBool;
     }
 
-    public SimpleBooleanProperty whiteBoolProperty() {
-        return whiteBool;
+    public boolean isWhiteBool() {
+        return whiteBool.get();
     }
 
     public void setWhiteBool(boolean whiteBool) {
         this.whiteBool.set(whiteBool);
     }
 
-    public boolean isBlackBool() {
-        return blackBool.get();
+    public SimpleBooleanProperty whiteBoolProperty() {
+        return whiteBool;
     }
 
-    public SimpleBooleanProperty blackBoolProperty() {
-        return blackBool;
+    public boolean isBlackBool() {
+        return blackBool.get();
     }
 
     public void setBlackBool(boolean blackBool) {
         this.blackBool.set(blackBool);
     }
 
+    public SimpleBooleanProperty blackBoolProperty() {
+        return blackBool;
+    }
+
     public String getHexColor() {
         return hexColor.get();
+    }
+
+    public void setHexColor(String hexColor) {
+        this.hexColor.set(hexColor);
     }
 
     public SimpleStringProperty hexColorProperty() {
@@ -199,36 +199,36 @@ public class PresentationModel {
         return rCH.get();
     }
 
-    public SimpleStringProperty rCHProperty() {
-        return rCH;
-    }
-
     public void setrCH(String rCH) {
         this.rCH.set(rCH);
+    }
+
+    public SimpleStringProperty rCHProperty() {
+        return rCH;
     }
 
     public String getgCH() {
         return gCH.get();
     }
 
-    public SimpleStringProperty gCHProperty() {
-        return gCH;
-    }
-
     public void setgCH(String gCH) {
         this.gCH.set(gCH);
+    }
+
+    public SimpleStringProperty gCHProperty() {
+        return gCH;
     }
 
     public String getbCH() {
         return bCH.get();
     }
 
-    public SimpleStringProperty bCHProperty() {
-        return bCH;
-    }
-
     public void setbCH(String bCH) {
         this.bCH.set(bCH);
+    }
+
+    public SimpleStringProperty bCHProperty() {
+        return bCH;
     }
 
     public Stage getPrimaryStage() {
@@ -239,155 +239,155 @@ public class PresentationModel {
         return applicationTitle.get();
     }
 
-    public StringProperty applicationTitleProperty() {
-        return applicationTitle;
-    }
-
     public void setApplicationTitle(String applicationTitle) {
         this.applicationTitle.set(applicationTitle);
+    }
+
+    public StringProperty applicationTitleProperty() {
+        return applicationTitle;
     }
 
     public String getFileMenuTitle() {
         return fileMenuTitle.get();
     }
 
-    public StringProperty fileMenuTitleProperty() {
-        return fileMenuTitle;
-    }
-
     public void setFileMenuTitle(String fileMenuTitle) {
         this.fileMenuTitle.set(fileMenuTitle);
+    }
+
+    public StringProperty fileMenuTitleProperty() {
+        return fileMenuTitle;
     }
 
     public String getAttributesMenuTitle() {
         return attributesMenuTitle.get();
     }
 
-    public StringProperty attributesMenuTitleProperty() {
-        return attributesMenuTitle;
-    }
-
     public void setAttributesMenuTitle(String attributesMenuTitle) {
         this.attributesMenuTitle.set(attributesMenuTitle);
+    }
+
+    public StringProperty attributesMenuTitleProperty() {
+        return attributesMenuTitle;
     }
 
     public String getCloseMenuItemTitle() {
         return closeMenuItemTitle.get();
     }
 
-    public StringProperty closeMenuItemTitleProperty() {
-        return closeMenuItemTitle;
-    }
-
     public void setCloseMenuItemTitle(String closeMenuItemTitle) {
         this.closeMenuItemTitle.set(closeMenuItemTitle);
+    }
+
+    public StringProperty closeMenuItemTitleProperty() {
+        return closeMenuItemTitle;
     }
 
     public String getAlertHeaderText() {
         return alertHeaderText.get();
     }
 
-    public StringProperty alertHeaderTextProperty() {
-        return alertHeaderText;
-    }
-
     public void setAlertHeaderText(String alertHeaderText) {
         this.alertHeaderText.set(alertHeaderText);
+    }
+
+    public StringProperty alertHeaderTextProperty() {
+        return alertHeaderText;
     }
 
     public String getDarkerButtonTitle() {
         return darkerButtonTitle.get();
     }
 
-    public StringProperty darkerButtonTitleProperty() {
-        return darkerButtonTitle;
-    }
-
     public void setDarkerButtonTitle(String darkerButtonTitle) {
         this.darkerButtonTitle.set(darkerButtonTitle);
+    }
+
+    public StringProperty darkerButtonTitleProperty() {
+        return darkerButtonTitle;
     }
 
     public String getBrighterButtonTitle() {
         return brighterButtonTitle.get();
     }
 
-    public StringProperty brighterButtonTitleProperty() {
-        return brighterButtonTitle;
-    }
-
     public void setBrighterButtonTitle(String brighterButtonTitle) {
         this.brighterButtonTitle.set(brighterButtonTitle);
+    }
+
+    public StringProperty brighterButtonTitleProperty() {
+        return brighterButtonTitle;
     }
 
     public int getrCI() {
         return rCI.get();
     }
 
-    public SimpleIntegerProperty rCIProperty() {
-        return rCI;
-    }
-
     public void setrCI(int rCI) {
         this.rCI.set(rCI);
+    }
+
+    public SimpleIntegerProperty rCIProperty() {
+        return rCI;
     }
 
     public String getrCS() {
         return rCS.get();
     }
 
-    public SimpleStringProperty rCSProperty() {
-        return rCS;
-    }
-
     public void setrCS(String rCS) {
         this.rCS.set(rCS);
+    }
+
+    public SimpleStringProperty rCSProperty() {
+        return rCS;
     }
 
     public int getgCI() {
         return gCI.get();
     }
 
-    public SimpleIntegerProperty gCIProperty() {
-        return gCI;
-    }
-
     public void setgCI(int gCI) {
         this.gCI.set(gCI);
+    }
+
+    public SimpleIntegerProperty gCIProperty() {
+        return gCI;
     }
 
     public String getgCS() {
         return gCS.get();
     }
 
-    public SimpleStringProperty gCSProperty() {
-        return gCS;
-    }
-
     public void setgCS(String gCS) {
         this.gCS.set(gCS);
+    }
+
+    public SimpleStringProperty gCSProperty() {
+        return gCS;
     }
 
     public int getbCI() {
         return bCI.get();
     }
 
-    public SimpleIntegerProperty bCIProperty() {
-        return bCI;
-    }
-
     public void setbCI(int bCI) {
         this.bCI.set(bCI);
+    }
+
+    public SimpleIntegerProperty bCIProperty() {
+        return bCI;
     }
 
     public String getbCS() {
         return bCS.get();
     }
 
-    public SimpleStringProperty bCSProperty() {
-        return bCS;
-    }
-
     public void setbCS(String bCS) {
         this.bCS.set(bCS);
+    }
+
+    public SimpleStringProperty bCSProperty() {
+        return bCS;
     }
 }
