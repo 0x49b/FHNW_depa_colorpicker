@@ -1,4 +1,4 @@
-package ch.fhnw.depa.colorpicker.helper;
+package ch.fhnw.depa.colorpicker.converter;
 
 import javafx.util.converter.NumberStringConverter;
 

@@ -1,6 +1,6 @@
 package ch.fhnw.depa.colorpicker.model;
 
-import ch.fhnw.depa.colorpicker.helper.NumberHexStringConverter;
+import ch.fhnw.depa.colorpicker.converter.NumberHexStringConverter;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
