@@ -81,10 +81,6 @@ public class PresentationModel {
         setbCI(b);
     }
 
-    public boolean isRedBool() {
-        return redBool.get();
-    }
-
     public void setRedBool(boolean redBool) {
         this.redBool.set(redBool);
     }
@@ -93,9 +89,6 @@ public class PresentationModel {
         return redBool;
     }
 
-    public boolean isGreenBool() {
-        return greenBool.get();
-    }
 
     public void setGreenBool(boolean greenBool) {
         this.greenBool.set(greenBool);
@@ -105,9 +98,6 @@ public class PresentationModel {
         return greenBool;
     }
 
-    public boolean isBlueBool() {
-        return blueBool.get();
-    }
 
     public void setBlueBool(boolean blueBool) {
         this.blueBool.set(blueBool);
@@ -117,9 +107,6 @@ public class PresentationModel {
         return blueBool;
     }
 
-    public boolean isYellowBool() {
-        return yellowBool.get();
-    }
 
     public void setYellowBool(boolean yellowBool) {
         this.yellowBool.set(yellowBool);
@@ -129,9 +116,6 @@ public class PresentationModel {
         return yellowBool;
     }
 
-    public boolean isCyanBool() {
-        return cyanBool.get();
-    }
 
     public void setCyanBool(boolean cyanBool) {
         this.cyanBool.set(cyanBool);
@@ -141,9 +125,6 @@ public class PresentationModel {
         return cyanBool;
     }
 
-    public boolean isOrangeBool() {
-        return orangeBool.get();
-    }
 
     public void setOrangeBool(boolean orangeBool) {
         this.orangeBool.set(orangeBool);
@@ -153,9 +134,6 @@ public class PresentationModel {
         return orangeBool;
     }
 
-    public boolean isWhiteBool() {
-        return whiteBool.get();
-    }
 
     public void setWhiteBool(boolean whiteBool) {
         this.whiteBool.set(whiteBool);
@@ -165,9 +143,6 @@ public class PresentationModel {
         return whiteBool;
     }
 
-    public boolean isBlackBool() {
-        return blackBool.get();
-    }
 
     public void setBlackBool(boolean blackBool) {
         this.blackBool.set(blackBool);
@@ -181,9 +156,6 @@ public class PresentationModel {
         return hexColor.get();
     }
 
-    public void setHexColor(String hexColor) {
-        this.hexColor.set(hexColor);
-    }
 
     public SimpleStringProperty hexColorProperty() {
         return hexColor;
@@ -195,36 +167,12 @@ public class PresentationModel {
     }
 
 
-    public String getrCH() {
-        return rCH.get();
-    }
-
-    public void setrCH(String rCH) {
-        this.rCH.set(rCH);
-    }
-
     public SimpleStringProperty rCHProperty() {
         return rCH;
     }
 
-    public String getgCH() {
-        return gCH.get();
-    }
-
-    public void setgCH(String gCH) {
-        this.gCH.set(gCH);
-    }
-
     public SimpleStringProperty gCHProperty() {
         return gCH;
-    }
-
-    public String getbCH() {
-        return bCH.get();
-    }
-
-    public void setbCH(String bCH) {
-        this.bCH.set(bCH);
     }
 
     public SimpleStringProperty bCHProperty() {
@@ -235,48 +183,16 @@ public class PresentationModel {
         return primaryStage;
     }
 
-    public String getApplicationTitle() {
-        return applicationTitle.get();
-    }
-
-    public void setApplicationTitle(String applicationTitle) {
-        this.applicationTitle.set(applicationTitle);
-    }
-
     public StringProperty applicationTitleProperty() {
         return applicationTitle;
-    }
-
-    public String getFileMenuTitle() {
-        return fileMenuTitle.get();
-    }
-
-    public void setFileMenuTitle(String fileMenuTitle) {
-        this.fileMenuTitle.set(fileMenuTitle);
     }
 
     public StringProperty fileMenuTitleProperty() {
         return fileMenuTitle;
     }
 
-    public String getAttributesMenuTitle() {
-        return attributesMenuTitle.get();
-    }
-
-    public void setAttributesMenuTitle(String attributesMenuTitle) {
-        this.attributesMenuTitle.set(attributesMenuTitle);
-    }
-
     public StringProperty attributesMenuTitleProperty() {
         return attributesMenuTitle;
-    }
-
-    public String getCloseMenuItemTitle() {
-        return closeMenuItemTitle.get();
-    }
-
-    public void setCloseMenuItemTitle(String closeMenuItemTitle) {
-        this.closeMenuItemTitle.set(closeMenuItemTitle);
     }
 
     public StringProperty closeMenuItemTitleProperty() {
@@ -287,32 +203,8 @@ public class PresentationModel {
         return alertHeaderText.get();
     }
 
-    public void setAlertHeaderText(String alertHeaderText) {
-        this.alertHeaderText.set(alertHeaderText);
-    }
-
-    public StringProperty alertHeaderTextProperty() {
-        return alertHeaderText;
-    }
-
-    public String getDarkerButtonTitle() {
-        return darkerButtonTitle.get();
-    }
-
-    public void setDarkerButtonTitle(String darkerButtonTitle) {
-        this.darkerButtonTitle.set(darkerButtonTitle);
-    }
-
     public StringProperty darkerButtonTitleProperty() {
         return darkerButtonTitle;
-    }
-
-    public String getBrighterButtonTitle() {
-        return brighterButtonTitle.get();
-    }
-
-    public void setBrighterButtonTitle(String brighterButtonTitle) {
-        this.brighterButtonTitle.set(brighterButtonTitle);
     }
 
     public StringProperty brighterButtonTitleProperty() {
@@ -331,14 +223,6 @@ public class PresentationModel {
         return rCI;
     }
 
-    public String getrCS() {
-        return rCS.get();
-    }
-
-    public void setrCS(String rCS) {
-        this.rCS.set(rCS);
-    }
-
     public SimpleStringProperty rCSProperty() {
         return rCS;
     }
@@ -355,14 +239,6 @@ public class PresentationModel {
         return gCI;
     }
 
-    public String getgCS() {
-        return gCS.get();
-    }
-
-    public void setgCS(String gCS) {
-        this.gCS.set(gCS);
-    }
-
     public SimpleStringProperty gCSProperty() {
         return gCS;
     }
@@ -377,14 +253,6 @@ public class PresentationModel {
 
     public SimpleIntegerProperty bCIProperty() {
         return bCI;
-    }
-
-    public String getbCS() {
-        return bCS.get();
-    }
-
-    public void setbCS(String bCS) {
-        this.bCS.set(bCS);
     }
 
     public SimpleStringProperty bCSProperty() {
