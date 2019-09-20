@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class AppStarter extends Application {
 
     @Override
@@ -15,6 +16,7 @@ public class AppStarter extends Application {
         Parent rootPanel = new ApplicationUI(pm);
 
         Scene scene = new Scene(rootPanel);
+
 
         primaryStage.titleProperty().bind(pm.applicationTitleProperty());
         primaryStage.setMinWidth(500);
