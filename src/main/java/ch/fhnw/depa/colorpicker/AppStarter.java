@@ -21,7 +21,6 @@ public class AppStarter extends Application {
 
         Scene scene = new Scene(rootPanel);
 
-
         primaryStage.titleProperty().bind(pm.applicationTitleProperty());
         primaryStage.setMinWidth(500);
         primaryStage.setMinHeight(250);

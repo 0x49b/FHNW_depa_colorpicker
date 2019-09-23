@@ -1,6 +1,8 @@
 group 'ch.fhnw'
 version '0.1-SNAPSHOT'
 apply plugin: 'java'
+sourceCompatibility = 8
+targetCompatibility = 8
 
 buildscript {
     repositories {
